@@ -120,14 +120,84 @@ describe('divide', () => {
 });
 
 describe('modulus', () => {
+  test('can modulus two small positive numbers', () => {
+    expected = 0;
+    actual = modulus(6, 2);
+    expect(actual).toBe(expected);
+  });
+
+  test('can modulus two large positive numbers', () => { 
+    expected = 0;
+    actual = modulus(600, 200);
+    expect(actual).toBe(expected);
+  });
+
+  test('can modulus two negative numbers', () => {
+    expected = -0;
+    actual = modulus(-6, -2);
+    expect(actual).toBe(expected);
+  });
+
+  test('can modulus zero', () => {
+    expected = NaN;
+    actual = modulus(5, 0);
+    expect(actual).toBe(expected);
+  });
 
 
 });
 
 describe('even', () => {
+  test('test small even numbers', () => {
+    expected = 0;
+    actual = even(6);
+    expect(actual).toBe(expected);
+  });
+
+  test('test positive numbers', () => { 
+    expected = 0;
+    actual = even(800);
+    expect(actual).toBe(expected);
+  });
+
+  test('test negative numbers', () => {
+    expected = -0;
+    actual = even(-6);
+    expect(actual).toBe(expected);
+  });
+
+  test('test zero', () => {
+    expected = 0;
+    actual = even(0);
+    expect(actual).toBe(expected);
+  });
 
 });
 
 describe('odd', () => {
+  test('test small odd numbers', () => {
+    expected = 1;
+    actual = odd(3);
+    expect(actual).toBe(expected);
+  });
+
+  test('test positive odd numbers', () => { 
+    expected = 1;
+    actual = odd(301);
+    expect(actual).toBe(expected);
+  });
+
+  test('test negative odd numbers', () => {
+    expected = -1;
+    actual = odd(-5);
+    expect(actual).toBe(expected);
+  });
+
+  test('test zero', () => {
+    expected = 0;
+    actual = odd(0);
+    expect(actual).toBe(expected);
+  });
+
 
 });
